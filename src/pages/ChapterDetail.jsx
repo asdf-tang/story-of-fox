@@ -28,14 +28,6 @@ function SceneCard({ scene, chapter, index }) {
         <p className="chapter-label">Scene {String(index + 1).padStart(2, '0')}</p>
         <h2>{scene.title}</h2>
         <p className="scene-text">{scene.text}</p>
-        <div className="tag-row">
-          <span>{scene.emotion}</span>
-          <span>{scene.palette}</span>
-        </div>
-        <details className="scene-description-toggle">
-          <summary>查看画面描述</summary>
-          <p>{scene.visualDescription}</p>
-        </details>
       </div>
     </motion.article>
   );
@@ -84,12 +76,6 @@ export default function ChapterDetail() {
             <h1>{chapter.title}</h1>
             <p className="detail-subtitle">{chapter.subtitle}</p>
             <p className="detail-summary">{chapter.summary}</p>
-            <div className="tag-row">
-              <span>{chapter.mood}</span>
-              {chapter.palette.map((color) => (
-                <span key={color}>{color}</span>
-              ))}
-            </div>
           </div>
           <div className="detail-hero-art">
             <StoryVisual
@@ -101,10 +87,6 @@ export default function ChapterDetail() {
               className="detail-visual hero-visual"
             />
           </div>
-        </div>
-        <div className="hero-visual-description">
-          <span>画面描述</span>
-          <p>{chapter.heroVisual}</p>
         </div>
       </motion.header>
 
