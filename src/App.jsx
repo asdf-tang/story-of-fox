@@ -1,6 +1,7 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ComicPanel from './components/ComicPanel.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 import ChapterDetail from './pages/ChapterDetail.jsx';
 import { cover, storyPanels, themeLine } from './data/storyData.js';
 
@@ -82,6 +83,7 @@ function NotFound() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/chapter/:chapterId" element={<ChapterDetail />} />
