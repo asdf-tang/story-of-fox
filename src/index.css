@@ -852,6 +852,8 @@ a {
   position: relative;
   z-index: 2;
   overflow: hidden;
+  padding: clamp(16px, 2.5vw, 24px);
+  background: rgba(255, 250, 240, 0.48);
 }
 
 .scene-copy {
@@ -875,9 +877,479 @@ a {
   line-height: 1.9;
 }
 
-.scene-note {
+.scene-note,
+.scene-description-toggle {
   margin-top: 22px;
   padding: 16px 18px;
+}
+
+.scene-description-toggle {
+  position: relative;
+  z-index: 2;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: inset 0 0 0 1px rgba(92, 62, 35, 0.08);
+}
+
+.scene-description-toggle summary {
+  color: #a76a3f;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.scene-description-toggle p {
+  margin: 10px 0 0;
+  color: rgba(63, 48, 40, 0.72);
+  line-height: 1.75;
+}
+
+.scene-illustration,
+.scene-illustration-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow:
+    0 18px 36px rgba(89, 54, 28, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+}
+
+.scene-illustration-image {
+  object-fit: cover;
+}
+
+.scene-illustration-paper {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.9) 1px, transparent 1px);
+  background-size: 15px 15px;
+  mix-blend-mode: screen;
+}
+
+.scene-illustration::before,
+.scene-illustration::after {
+  position: absolute;
+  content: "";
+}
+
+.illus-forest {
+  background:
+    radial-gradient(circle at 24% 18%, rgba(255, 221, 116, 0.72), transparent 9rem),
+    linear-gradient(180deg, #f9ddb0 0%, #b9cf8b 58%, #79a05e 100%);
+}
+
+.illus-lonely-forest {
+  background:
+    radial-gradient(circle at 72% 18%, rgba(255, 218, 132, 0.34), transparent 8rem),
+    linear-gradient(135deg, #dfc297 0%, #8ea06d 48%, #405842 100%);
+}
+
+.illus-house {
+  background:
+    radial-gradient(circle at 72% 34%, rgba(255, 229, 152, 0.82), transparent 9rem),
+    linear-gradient(180deg, #f9e7bd 0%, #d3b07c 56%, #8fa66d 100%);
+}
+
+.illus-meadow {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), transparent 36%),
+    linear-gradient(180deg, #e9f4d2 0%, #b7d98d 58%, #7fb369 100%);
+}
+
+.illus-meadow.muted {
+  background: linear-gradient(180deg, #edf1d8 0%, #b6c99a 62%, #8aa56f 100%);
+}
+
+.illus-flowers,
+.illus-flowers.bright {
+  background:
+    radial-gradient(circle at 68% 24%, rgba(255, 218, 236, 0.8), transparent 10rem),
+    linear-gradient(180deg, #ffe2c5 0%, #f3c1d9 52%, #96c989 100%);
+}
+
+.illus-flowers.bright {
+  background:
+    radial-gradient(circle at 66% 44%, rgba(255, 244, 133, 0.7), transparent 11rem),
+    linear-gradient(180deg, #ffd7c7 0%, #eda7d0 55%, #97c970 100%);
+}
+
+.illus-deep-forest {
+  background: linear-gradient(135deg, #ffd6b2 0%, #9bb56f 38%, #304d3e 100%);
+}
+
+.illus-cave {
+  background:
+    radial-gradient(circle at 50% 72%, rgba(244, 188, 100, 0.12), transparent 9rem),
+    linear-gradient(180deg, #141222 0%, #25213a 52%, #0b0a12 100%);
+}
+
+.illus-cave.dark {
+  background: radial-gradient(circle at 50% 68%, #272237 0%, #08070d 62%);
+}
+
+.illus-cave.blue {
+  background:
+    radial-gradient(circle at 70% 35%, rgba(157, 216, 238, 0.24), transparent 8rem),
+    linear-gradient(135deg, #10111e 0%, #27354d 64%, #5f8491 100%);
+}
+
+.illus-cave.exit {
+  background:
+    radial-gradient(circle at 82% 38%, rgba(221, 249, 255, 0.86), transparent 7rem),
+    linear-gradient(135deg, #0e1020 0%, #26334c 60%, #a8d4d9 100%);
+}
+
+.illus-lake,
+.illus-lake.warm,
+.illus-quiet-lake {
+  background:
+    linear-gradient(180deg, #e5f3f1 0%, #9acdd0 48%, #5c9ca9 100%);
+}
+
+.illus-lake.warm {
+  background:
+    radial-gradient(circle at 74% 36%, rgba(255, 215, 136, 0.72), transparent 9rem),
+    linear-gradient(180deg, #dff3ec 0%, #8ec8c4 52%, #6ca5a3 100%);
+}
+
+.illus-quiet-lake {
+  background:
+    radial-gradient(circle at 24% 22%, rgba(255, 215, 135, 0.36), transparent 9rem),
+    linear-gradient(180deg, #e6f0eb 0%, #98c9cf 55%, #6f9faa 100%);
+}
+
+.illus-room,
+.illus-storm-room {
+  background:
+    radial-gradient(circle at 70% 36%, rgba(255, 219, 139, 0.76), transparent 9rem),
+    linear-gradient(180deg, #fff0d0 0%, #e2bd8f 100%);
+}
+
+.illus-storm-room {
+  background:
+    radial-gradient(circle at 72% 36%, rgba(255, 205, 130, 0.38), transparent 8rem),
+    linear-gradient(135deg, #53627b 0%, #d0aa82 72%);
+}
+
+.illus-play {
+  background: linear-gradient(180deg, #d8edf5 0%, #b9df9a 64%, #76ad6c 100%);
+}
+
+.illus-storm {
+  background:
+    radial-gradient(circle at 50% 74%, rgba(26, 23, 37, 0.72), transparent 8rem),
+    linear-gradient(180deg, #34415e 0%, #10131f 100%);
+}
+
+.illus-sun-warm,
+.illus-soft-gray,
+.illus-sun-burst {
+  background:
+    radial-gradient(circle at 50% 44%, rgba(255, 248, 185, 0.86), transparent 11rem),
+    linear-gradient(180deg, #fff1c2 0%, #f6b66c 100%);
+}
+
+.illus-soft-gray {
+  background: linear-gradient(180deg, #eee6db 0%, #d9c3aa 100%);
+}
+
+.illus-sun-burst {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 215, 0.92), transparent 12rem),
+    linear-gradient(180deg, #fff0a7 0%, #f28d50 100%);
+}
+
+.illus-memory,
+.illus-collage,
+.illus-heart-memory,
+.illus-finale {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 237, 168, 0.7), transparent 12rem),
+    linear-gradient(135deg, #fff2c7 0%, #a7d0c9 52%, #f2b477 100%);
+}
+
+.illus-character,
+.memory-bubble,
+.illus-bone,
+.illus-slipper-door,
+.illus-food,
+.illus-leaves,
+.illus-flower-bed,
+.illus-big-flower,
+.illus-steam,
+.illus-sparkles,
+.illus-lightning,
+.illus-lightning-ears,
+.illus-heart-glow,
+.illus-music {
+  position: absolute;
+  z-index: 6;
+  line-height: 1;
+  filter: drop-shadow(0 12px 14px rgba(42, 31, 24, 0.18));
+}
+
+.illus-character.fox,
+.illus-character.redFox {
+  bottom: 18%;
+  left: 42%;
+  font-size: clamp(56px, 8vw, 94px);
+}
+
+.illus-character.redFox {
+  filter: drop-shadow(0 0 18px rgba(255, 148, 72, 0.42));
+}
+
+.illus-character.dog,
+.illus-character.sheep,
+.illus-character.rabbit {
+  bottom: 18%;
+  right: 26%;
+  font-size: clamp(52px, 7vw, 84px);
+}
+
+.illus-character.butterfly {
+  top: 24%;
+  right: 28%;
+  font-size: clamp(34px, 5vw, 58px);
+}
+
+.illus-character.butterfly-2 {
+  top: 36%;
+  right: 52%;
+  font-size: clamp(28px, 4vw, 48px);
+}
+
+.illus-character.small,
+.illus-character.tiny {
+  font-size: clamp(38px, 6vw, 66px);
+}
+
+.illus-character.center { left: 45%; }
+.illus-character.left { left: 24%; right: auto; }
+.illus-character.right { right: 22%; left: auto; }
+.illus-character.far { bottom: 28%; left: 58%; transform: scale(0.72); }
+.illus-character.jump { bottom: 26%; transform: rotate(-8deg); }
+.illus-character.sniff { bottom: 17%; transform: rotate(8deg); }
+.illus-character.bright::after,
+.illus-character.question::after {
+  position: absolute;
+  top: -24px;
+  right: -14px;
+  content: "!";
+  color: #f6b244;
+  font-weight: 900;
+}
+.illus-character.question::after { content: "?"; }
+.illus-character.alone { left: 62%; right: auto; transform: scale(0.68); opacity: 0.85; }
+.illus-character.mist { opacity: 0.92; }
+.illus-character.eat { bottom: 15%; transform: rotate(7deg); }
+.illus-character.nuzzle { right: 24%; transform: rotate(-7deg); }
+.illus-character.falling { top: 28%; left: 48%; transform: rotate(34deg); }
+.illus-character.calling { bottom: 28%; left: 44%; }
+.illus-character.fallen { bottom: 16%; left: 44%; transform: rotate(82deg); }
+.illus-character.curled,
+.illus-character.corner {
+  bottom: 18%;
+  left: 42%;
+  transform: scale(0.76) rotate(-8deg);
+  opacity: 0.9;
+}
+.illus-character.ears,
+.illus-character.looking { bottom: 22%; left: 42%; }
+.illus-character.walking,
+.illus-character.towardLight { bottom: 18%; left: 34%; }
+.illus-character.swim { bottom: 35%; left: 40%; transform: rotate(-8deg); }
+.illus-character.sleep { bottom: 21%; left: 45%; transform: rotate(82deg); }
+.illus-character.friends { left: 38%; bottom: 18%; }
+.illus-character.run { bottom: 22%; }
+.illus-character.dream { bottom: 18%; left: 30%; transform: scale(0.8); }
+.illus-character.door { right: 18%; bottom: 20%; }
+.illus-character.listening { right: 22%; bottom: 20%; }
+.illus-character.angry { right: 24%; bottom: 34%; transform: rotate(-8deg) scale(1.08); }
+.illus-character.startled { left: 25%; bottom: 18%; transform: scale(0.86); }
+.illus-character.talk { right: auto; left: 45%; bottom: 16%; }
+.illus-character.kneel { right: 20%; bottom: 17%; transform: scale(0.86); }
+.illus-character.busy { right: 18%; bottom: 20%; }
+.illus-character.red { left: 42%; bottom: 18%; transform: scale(1.05); }
+.illus-character.window,
+.illus-character.shore { left: 34%; bottom: 22%; }
+.illus-character.happy { right: 18%; bottom: 19%; }
+
+.illus-character.friend-0 { left: 18%; right: auto; bottom: 18%; font-size: clamp(36px, 5vw, 58px); }
+.illus-character.friend-1 { left: 62%; right: auto; bottom: 18%; font-size: clamp(36px, 5vw, 58px); }
+.illus-character.friend-2 { left: 72%; right: auto; bottom: 28%; font-size: clamp(36px, 5vw, 58px); }
+.illus-character.friend-3 { left: 76%; right: auto; bottom: 18%; font-size: clamp(42px, 6vw, 66px); }
+
+.illus-sun,
+.illus-house-shape,
+.illus-path,
+.illus-mist,
+.illus-hill,
+.illus-dew,
+.illus-field,
+.illus-wind-lines,
+.illus-cave-opening,
+.illus-rocks,
+.illus-echoes,
+.illus-mud,
+.illus-big-rock,
+.illus-pressure,
+.illus-eye-light,
+.illus-steps,
+.illus-exit-light,
+.illus-lake-water,
+.illus-warm-light,
+.illus-lamp,
+.illus-mat,
+.illus-puddle,
+.illus-clouds,
+.illus-room-shadow,
+.illus-storm-cloud,
+.illus-reflection {
+  position: absolute;
+  z-index: 4;
+  content: "";
+}
+
+.illus-sun {
+  top: 13%;
+  left: 15%;
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f7b447;
+  box-shadow: 0 0 42px rgba(247, 180, 71, 0.6);
+}
+
+.illus-house-shape {
+  right: 12%;
+  bottom: 24%;
+  width: 34%;
+  height: 34%;
+  border-radius: 18px 18px 8px 8px;
+  background: #d9965c;
+  box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.08);
+}
+
+.illus-house-shape::before {
+  position: absolute;
+  right: -8%;
+  bottom: 75%;
+  width: 116%;
+  height: 46%;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: #8c573a;
+  content: "";
+}
+
+.illus-path {
+  bottom: -10%;
+  left: 38%;
+  width: 28%;
+  height: 62%;
+  border-radius: 50% 50% 0 0;
+  background: rgba(255, 238, 185, 0.42);
+  transform: perspective(220px) rotateX(55deg);
+  transform-origin: bottom;
+}
+
+.illus-path.winding {
+  left: 46%;
+  width: 20%;
+  transform: perspective(220px) rotateX(58deg) rotate(-18deg);
+}
+
+.illus-path.hidden {
+  left: 28%;
+  background: rgba(255, 238, 185, 0.28);
+}
+
+.illus-path.split {
+  left: 24%;
+  width: 42%;
+}
+
+.illus-path.deep {
+  left: 52%;
+  background: rgba(70, 58, 45, 0.24);
+}
+
+.illus-leaves { left: 18%; bottom: 20%; font-size: 30px; }
+.illus-bone { right: 22%; bottom: 40%; font-size: clamp(42px, 6vw, 70px); transform: rotate(-12deg); }
+.illus-steam { right: 27%; top: 24%; color: rgba(255, 255, 255, 0.86); font-size: 30px; }
+.illus-mist { inset: 18% 0 auto; height: 34%; background: linear-gradient(180deg, rgba(255,255,255,0.62), transparent); filter: blur(8px); }
+.illus-hill { left: -8%; right: -8%; bottom: 0; height: 48%; border-radius: 55% 55% 0 0; background: rgba(111, 167, 88, 0.38); }
+.illus-dew { left: 20%; right: 20%; bottom: 30%; height: 6px; background: radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 3px); background-size: 28px 6px; }
+.illus-field { left: -8%; right: -8%; bottom: -4%; height: 48%; border-radius: 50% 50% 0 0; background: rgba(92, 151, 76, 0.34); }
+.illus-flower-bed { left: 12%; right: 12%; bottom: 16%; color: rgba(255, 255, 255, 0.92); font-size: clamp(28px, 5vw, 52px); text-align: center; }
+.illus-big-flower { right: 21%; bottom: 23%; color: #ffec8d; font-size: clamp(92px, 14vw, 150px); text-shadow: 0 0 24px rgba(255, 236, 141, 0.7); }
+.illus-wind-lines { left: 22%; right: 18%; top: 34%; height: 50px; border-top: 4px solid rgba(220, 247, 255, 0.72); border-bottom: 3px solid rgba(220, 247, 255, 0.42); border-radius: 50%; }
+.illus-sparkles { top: 18%; left: 52%; color: #fff7c6; font-size: 36px; }
+.illus-cave-opening { top: -12%; left: 30%; width: 40%; height: 28%; border-radius: 0 0 50% 50%; background: rgba(209, 215, 206, 0.26); }
+.illus-rocks { left: 10%; right: 10%; bottom: 10%; height: 18%; background: radial-gradient(ellipse at 20% 80%, #4c455a 0 18%, transparent 19%), radial-gradient(ellipse at 64% 70%, #393348 0 22%, transparent 23%); }
+.illus-echoes { inset: 20% 18%; border: 3px solid rgba(220, 236, 255, 0.24); border-left-color: transparent; border-right-color: transparent; border-radius: 50%; box-shadow: 0 0 0 22px rgba(220, 236, 255, 0.08), 0 0 0 44px rgba(220, 236, 255, 0.04); }
+.illus-mud { left: 32%; bottom: 15%; width: 36%; height: 12%; border-radius: 50%; background: rgba(75, 63, 55, 0.44); }
+.illus-big-rock { left: 22%; right: 22%; bottom: 12%; height: 26%; border-radius: 50% 50% 30% 30%; background: #302b3b; }
+.illus-pressure { inset: 0; background: radial-gradient(circle at 50% 70%, transparent 20%, rgba(0,0,0,0.36) 70%); }
+.illus-eye-light { right: 32%; top: 38%; width: 10px; aspect-ratio: 1; border-radius: 50%; background: #d9fbff; box-shadow: 0 0 20px #d9fbff; }
+.illus-steps { left: 30%; bottom: 25%; width: 40%; height: 8%; background: radial-gradient(circle, rgba(255,255,255,0.34) 2px, transparent 4px); background-size: 34px 18px; transform: rotate(-12deg); }
+.illus-exit-light { right: -8%; top: 16%; width: 42%; aspect-ratio: 1; border-radius: 50%; background: rgba(218, 250, 255, 0.86); box-shadow: 0 0 60px rgba(218, 250, 255, 0.86); }
+.illus-lake-water { left: -6%; right: -6%; bottom: 0; height: 42%; background: repeating-linear-gradient(0deg, rgba(255,255,255,0.28) 0 2px, transparent 2px 18px), rgba(72, 150, 166, 0.42); border-radius: 50% 50% 0 0; }
+.illus-warm-light { right: 15%; bottom: 28%; width: 18%; aspect-ratio: 1; border-radius: 50%; background: rgba(255, 218, 139, 0.82); box-shadow: 0 0 34px rgba(255, 218, 139, 0.82); }
+.illus-slipper-door { right: 18%; bottom: 28%; font-size: clamp(68px, 10vw, 116px); transform: rotate(8deg); }
+.illus-lamp { right: 22%; top: 24%; width: 34px; height: 56px; border-radius: 18px 18px 8px 8px; background: #ffd66f; box-shadow: 0 0 34px rgba(255, 214, 111, 0.78); }
+.illus-food { left: 20%; bottom: 24%; font-size: 38px; }
+.illus-mat { left: 28%; right: 22%; bottom: 14%; height: 18%; border-radius: 999px; background: rgba(255, 239, 204, 0.65); }
+.illus-puddle { left: 34%; bottom: 15%; width: 28%; height: 12%; border-radius: 50%; background: rgba(102, 176, 210, 0.44); }
+.illus-clouds { left: 18%; top: 16%; width: 22%; height: 10%; border-radius: 999px; background: rgba(255,255,255,0.7); box-shadow: 42px 18px 0 rgba(255,255,255,0.5); }
+.illus-lightning { right: 25%; top: 14%; color: #fff1a6; font-size: 86px; text-shadow: 0 0 20px rgba(255,241,166,0.8); }
+.illus-room-shadow { left: 0; bottom: 0; width: 55%; height: 70%; background: radial-gradient(circle at 30% 70%, rgba(0,0,0,0.34), transparent 58%); }
+.illus-lightning-ears { right: 20%; top: 18%; color: #f28f47; font-size: 38px; }
+.illus-heart-glow { left: 46%; top: 34%; color: #fff4bc; font-size: 72px; text-shadow: 0 0 32px rgba(255,244,188,0.9); }
+.illus-music { right: 18%; top: 28%; color: #a76a3f; font-size: 34px; }
+.illus-storm-cloud { right: 12%; top: 15%; width: 26%; height: 16%; border-radius: 999px; background: rgba(70, 78, 95, 0.52); box-shadow: 0 16px 0 rgba(70,78,95,0.28); }
+.illus-reflection { left: 32%; right: 32%; bottom: 12%; height: 12%; border-radius: 50%; background: rgba(255,255,255,0.3); box-shadow: inset 36px 0 0 rgba(100,100,100,0.18), inset -36px 0 0 rgba(220,100,52,0.24); }
+
+.illus-sun-dot {
+  position: absolute;
+  z-index: 5;
+  top: calc(16% + (var(--i) % 4) * 13%);
+  left: calc(12% + var(--i) * 7.6%);
+  width: clamp(22px, 4vw, 40px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #ffd45a;
+  box-shadow: 0 0 24px rgba(255, 212, 90, 0.76);
+}
+
+.memory-bubble {
+  display: grid;
+  place-items: center;
+  width: clamp(54px, 8vw, 84px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 12px 24px rgba(89, 54, 28, 0.12);
+  font-size: clamp(28px, 5vw, 48px);
+}
+
+.bubble-0 { left: 14%; top: 18%; }
+.bubble-1 { right: 18%; top: 18%; }
+.bubble-2 { left: 18%; bottom: 18%; }
+.bubble-3 { right: 18%; bottom: 18%; }
+
+.scene-illustration[data-scene="9-5"]::after,
+.scene-illustration[data-scene="9-6"]::after {
+  inset: 8%;
+  border-radius: 50%;
+  background: repeating-conic-gradient(from 10deg, rgba(255, 236, 120, 0.28) 0deg 8deg, transparent 8deg 18deg);
 }
 
 .chapter-nav {

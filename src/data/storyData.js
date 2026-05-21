@@ -32,6 +32,7 @@ export const chapters = [
         emotion: '孤独、好奇、出发',
         palette: '暖绿色、金色、橙色',
         image: '',
+        illustrationType: 'forest_entrance',
       },
       {
         id: '1-2',
@@ -42,6 +43,7 @@ export const chapters = [
         emotion: '渺小、探索、轻微不安',
         palette: '深浅绿色、浅棕色、柔金色',
         image: '',
+        illustrationType: 'long_forest_path',
       },
       {
         id: '1-3',
@@ -52,6 +54,7 @@ export const chapters = [
         emotion: '惊喜、陪伴、安心',
         palette: '明亮绿色、浅棕色、暖黄色',
         image: '',
+        illustrationType: 'meet_dog',
       },
       {
         id: '1-4',
@@ -62,6 +65,7 @@ export const chapters = [
         emotion: '温暖、轻快、有人同行',
         palette: '暖绿、橙黄、落叶棕',
         image: '',
+        illustrationType: 'dog_finds_path',
       },
     ],
   },
@@ -91,6 +95,7 @@ export const chapters = [
         emotion: '诱惑、发现、转折',
         palette: '奶油黄、木棕色、暖橘色',
         image: '',
+        illustrationType: 'warm_house_bone',
       },
       {
         id: '2-2',
@@ -101,6 +106,7 @@ export const chapters = [
         emotion: '开心、不安、分别将至',
         palette: '暖黄、木色、柔橙',
         image: '',
+        illustrationType: 'dog_choice',
       },
       {
         id: '2-3',
@@ -111,6 +117,7 @@ export const chapters = [
         emotion: '不舍、犹豫、委屈',
         palette: '柔棕、浅黄、低饱和橙色',
         image: '',
+        illustrationType: 'fox_asks_dog',
       },
       {
         id: '2-4',
@@ -121,6 +128,7 @@ export const chapters = [
         emotion: '失落、误解、第一次受伤',
         palette: '暖色渐灰、浅褐色、橙棕色',
         image: '',
+        illustrationType: 'fox_walks_alone',
       },
     ],
   },
@@ -150,6 +158,7 @@ export const chapters = [
         emotion: '温柔、安静、再次被陪伴',
         palette: '浅绿色、雾白色、淡金色',
         image: '',
+        illustrationType: 'misty_sheep',
       },
       {
         id: '3-2',
@@ -160,6 +169,7 @@ export const chapters = [
         emotion: '恢复、安心、柔和陪伴',
         palette: '浅绿、淡黄、柔白',
         image: '',
+        illustrationType: 'dewy_hill',
       },
       {
         id: '3-3',
@@ -170,6 +180,7 @@ export const chapters = [
         emotion: '归属、安定、分别前的安静',
         palette: '草绿色、浅黄绿色、柔白色',
         image: '',
+        illustrationType: 'meadow_arrival',
       },
       {
         id: '3-4',
@@ -180,6 +191,7 @@ export const chapters = [
         emotion: '理解、不舍、第二次失落',
         palette: '柔绿、浅灰绿、淡金',
         image: '',
+        illustrationType: 'sheep_stays',
       },
     ],
   },
@@ -209,6 +221,7 @@ export const chapters = [
         emotion: '惊喜、轻盈、短暂快乐',
         palette: '粉色、浅紫色、嫩绿色、浅橙色',
         image: '',
+        illustrationType: 'butterfly_arrival',
       },
       {
         id: '4-2',
@@ -219,6 +232,7 @@ export const chapters = [
         emotion: '梦幻、亲密、温柔',
         palette: '柔粉、嫩绿、淡黄、浅紫',
         image: '',
+        illustrationType: 'butterfly_story',
       },
       {
         id: '4-3',
@@ -229,6 +243,7 @@ export const chapters = [
         emotion: '美丽、安静、分别将至',
         palette: '亮粉、金黄、柔紫',
         image: '',
+        illustrationType: 'flower_sea',
       },
       {
         id: '4-4',
@@ -239,6 +254,7 @@ export const chapters = [
         emotion: '孤独、困惑、被落下',
         palette: '花朵亮粉、柔黄、深绿阴影',
         image: '',
+        illustrationType: 'fox_deeper_forest',
       },
     ],
   },
@@ -268,6 +284,7 @@ export const chapters = [
         emotion: '惊慌、失重、害怕',
         palette: '深蓝色、黑色、冷灰色',
         image: '',
+        illustrationType: 'falling_cave',
       },
       {
         id: '5-2',
@@ -278,6 +295,7 @@ export const chapters = [
         emotion: '绝望、空荡、被遗弃感',
         palette: '深灰蓝、冷黑色、苍白回音线',
         image: '',
+        illustrationType: 'cave_echo',
       },
       {
         id: '5-3',
@@ -288,6 +306,7 @@ export const chapters = [
         emotion: '痛苦、疲惫、委屈',
         palette: '黑灰、泥土灰、冷蓝色',
         image: '',
+        illustrationType: 'fox_falls',
       },
       {
         id: '5-4',
@@ -298,6 +317,7 @@ export const chapters = [
         emotion: '崩溃、无助、彻底低落',
         palette: '黑灰色、冷蓝色、低饱和暗色',
         image: '',
+        illustrationType: 'fox_curls_rock',
       },
     ],
   },
@@ -327,6 +347,7 @@ export const chapters = [
         emotion: '迟疑、觉察、微弱希望',
         palette: '黑蓝、冷灰、极淡蓝白',
         image: '',
+        illustrationType: 'tiny_wind',
       },
       {
         id: '6-2',
@@ -337,6 +358,7 @@ export const chapters = [
         emotion: '思考、希望、重新抬头',
         palette: '黑蓝背景、蓝白微光',
         image: '',
+        illustrationType: 'looking_for_exit',
       },
       {
         id: '6-3',
@@ -347,6 +369,7 @@ export const chapters = [
         emotion: '艰难、坚持、重新行动',
         palette: '深黑蓝到灰蓝渐变',
         image: '',
+        illustrationType: 'step_by_step',
       },
       {
         id: '6-4',
@@ -357,6 +380,7 @@ export const chapters = [
         emotion: '希望、突破、即将走出黑暗',
         palette: '黑蓝、银白光、浅蓝',
         image: '',
+        illustrationType: 'light_ahead',
       },
     ],
   },
@@ -386,6 +410,7 @@ export const chapters = [
         emotion: '重见光明、疲惫、陌生',
         palette: '湖蓝、白色、浅银色',
         image: '',
+        illustrationType: 'lake_outside_cave',
       },
       {
         id: '7-2',
@@ -396,6 +421,7 @@ export const chapters = [
         emotion: '紧张、坚持、渡过难关',
         palette: '冷蓝色、白色水花、远处暖黄',
         image: '',
+        illustrationType: 'swimming_lake',
       },
       {
         id: '7-3',
@@ -406,6 +432,7 @@ export const chapters = [
         emotion: '惊奇、好奇、安全感初现',
         palette: '暖黄色、奶油色、浅棕色',
         image: '',
+        illustrationType: 'slipper_door',
       },
       {
         id: '7-4',
@@ -416,6 +443,7 @@ export const chapters = [
         emotion: '安全、放松、终于被照顾',
         palette: '暖橙、米色、柔黄光',
         image: '',
+        illustrationType: 'safe_sleep',
       },
       {
         id: '7-5',
@@ -426,6 +454,7 @@ export const chapters = [
         emotion: '恢复、社交、生活重新热闹起来',
         palette: '暖棕、柔绿、暖橘',
         image: '',
+        illustrationType: 'new_friends',
       },
     ],
   },
@@ -455,6 +484,7 @@ export const chapters = [
         emotion: '亲密、快乐、重新被陪伴',
         palette: '浅蓝、草绿、暖橙、柔白',
         image: '',
+        illustrationType: 'rabbit_play',
       },
       {
         id: '8-2',
@@ -465,6 +495,7 @@ export const chapters = [
         emotion: '恐惧、旧梦复发、失控',
         palette: '深蓝、灰黑、白色闪电',
         image: '',
+        illustrationType: 'storm_nightmare',
       },
       {
         id: '8-3',
@@ -475,6 +506,7 @@ export const chapters = [
         emotion: '脆弱、害怕、封闭',
         palette: '冷蓝阴影、室内暖光对比',
         image: '',
+        illustrationType: 'corner_fox',
       },
       {
         id: '8-4',
@@ -485,6 +517,7 @@ export const chapters = [
         emotion: '悲伤、自我否定、被倾听',
         palette: '灰蓝、低饱和暖灰、暗橙',
         image: '',
+        illustrationType: 'nobody_loves_me',
       },
     ],
   },
@@ -516,6 +549,7 @@ export const chapters = [
         emotion: '着急、心疼、可爱地生气',
         palette: '暖白、浅粉、明亮橙',
         image: '',
+        illustrationType: 'angry_rabbit',
       },
       {
         id: '9-2',
@@ -526,6 +560,7 @@ export const chapters = [
         emotion: '解释、纠正误解、温柔坚定',
         palette: '柔黄、浅绿、浅粉、暖米',
         image: '',
+        illustrationType: 'not_unlove',
       },
       {
         id: '9-3',
@@ -536,6 +571,7 @@ export const chapters = [
         emotion: '触动、松动、微弱光亮',
         palette: '金色微光、米白、柔橙',
         image: '',
+        illustrationType: 'love_in_heart',
       },
       {
         id: '9-4',
@@ -546,6 +582,7 @@ export const chapters = [
         emotion: '无奈、坚持、陪伴',
         palette: '柔灰、暖白、淡黄',
         image: '',
+        illustrationType: 'still_curled',
       },
       {
         id: '9-5',
@@ -556,6 +593,7 @@ export const chapters = [
         emotion: '被包围的温暖、慢慢苏醒、重新被爱照亮',
         palette: '金色、橙色、暖白、柔红',
         image: '',
+        illustrationType: 'ten_suns',
       },
       {
         id: '9-6',
@@ -566,6 +604,7 @@ export const chapters = [
         emotion: '恢复、重新发光、终于笑了',
         palette: '火红、金黄、亮橙、暖白光',
         image: '',
+        illustrationType: 'red_fox',
       },
     ],
   },
@@ -597,6 +636,7 @@ export const chapters = [
         emotion: '真实、平静、脆弱仍在',
         palette: '柔灰蓝、浅金、低饱和橙',
         image: '',
+        illustrationType: 'darkness_returns',
       },
       {
         id: '10-2',
@@ -607,6 +647,7 @@ export const chapters = [
         emotion: '理解、自我接纳、成长',
         palette: '湖蓝、柔橙、淡金',
         image: '',
+        illustrationType: 'brave_with_fear',
       },
       {
         id: '10-3',
@@ -617,6 +658,7 @@ export const chapters = [
         emotion: '释然、理解、完整',
         palette: '暖绿、柔粉、金黄、湖蓝',
         image: '',
+        illustrationType: 'each_world',
       },
       {
         id: '10-4',
@@ -627,6 +669,7 @@ export const chapters = [
         emotion: '被爱、收藏、温柔收束',
         palette: '金橙、柔白、暖粉',
         image: '',
+        illustrationType: 'love_collected',
       },
       {
         id: '10-5',
@@ -637,6 +680,7 @@ export const chapters = [
         emotion: '安宁、归属、自爱、治愈',
         palette: '金橙、湖蓝、柔白、草绿',
         image: '',
+        illustrationType: 'self_love',
       },
     ],
   },

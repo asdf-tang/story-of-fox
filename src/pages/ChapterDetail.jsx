@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import StoryVisual from '../components/StoryVisual.jsx';
+import SceneIllustration from '../components/SceneIllustration.jsx';
 import { chapters, getChapterById } from '../data/storyData.js';
 
 function SceneCard({ scene, chapter, index }) {
@@ -13,27 +14,28 @@ function SceneCard({ scene, chapter, index }) {
       transition={{ duration: 0.62, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="scene-visual-frame">
-        <StoryVisual
+        <SceneIllustration
+          chapterId={chapter.id}
+          sceneId={scene.id}
+          mood={scene.emotion}
+          palette={scene.palette}
+          visualDescription={scene.visualDescription}
           image={scene.image}
-          title={scene.title}
-          visual={chapter.visual}
-          stage={chapter.stage}
-          gradient={chapter.gradient}
-          className="detail-visual"
+          illustrationType={scene.illustrationType}
         />
       </div>
       <div className="scene-copy">
         <p className="chapter-label">Scene {String(index + 1).padStart(2, '0')}</p>
         <h2>{scene.title}</h2>
         <p className="scene-text">{scene.text}</p>
-        <div className="scene-note">
-          <span>画面</span>
-          <p>{scene.visualDescription}</p>
-        </div>
         <div className="tag-row">
           <span>{scene.emotion}</span>
           <span>{scene.palette}</span>
         </div>
+        <details className="scene-description-toggle">
+          <summary>查看画面描述</summary>
+          <p>{scene.visualDescription}</p>
+        </details>
       </div>
     </motion.article>
   );
