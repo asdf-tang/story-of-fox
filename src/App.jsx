@@ -1,12 +1,14 @@
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ComicPanel from './components/ComicPanel.jsx';
+import ChapterDetail from './pages/ChapterDetail.jsx';
 import { cover, storyPanels, themeLine } from './data/storyData.js';
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-export default function App() {
+function HomePage() {
   return (
     <main className="min-h-screen overflow-hidden">
       <section className="cover-section">
@@ -54,5 +56,37 @@ export default function App() {
         </button>
       </motion.section>
     </main>
+  );
+}
+
+function NotFound() {
+  return (
+    <main className="not-found-page">
+      <motion.section
+        className="not-found-card"
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, ease: 'easeOut' }}
+      >
+        <p className="cover-kicker">Lost Chapter</p>
+        <h1>这片森林里还没有这一章。</h1>
+        <p>也许小狐狸还在路上。先回到目录，重新从森林入口出发吧。</p>
+        <Link className="detail-button primary" to="/">
+          返回首页
+        </Link>
+      </motion.section>
+    </main>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/chapter/:chapterId" element={<ChapterDetail />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
